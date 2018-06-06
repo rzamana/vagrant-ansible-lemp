@@ -1,4 +1,4 @@
-# Vagrant LEMP-stack
+# studioboz LEMP-stack
 
 Easily configurable local LEMP-environment for multiple local-domains.
 
@@ -15,14 +15,14 @@ Easily configurable local LEMP-environment for multiple local-domains.
 
 ### Getting started
 
-* Install [Vagrant](https://www.vagrantup.com/) & [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
+* Install [studioboz](https://www.studiobozup.com/) & [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
 * Install [Ansible](http://docs.ansible.com/ansible/intro_installation.html)
-* Install hostsupdater-plugin for vagrant: `vagrant plugin install vagrant-hostsupdater`
-* Run `vagrant up`
+* Install hostsupdater-plugin for studioboz: `studioboz plugin install studioboz-hostsupdater`
+* Run `studioboz up`
 
 ### Adding sites (projects)
 * Add site-information to `config.yml` `sites`-array.
-* Run `vagrant provision` to automatically add necessary information to the box & to you hosts-file.
+* Run `studioboz provision` to automatically add necessary information to the box & to you hosts-file.
 
 ### What if I run into problems...?
 * Installing Mailcatcher has been disabled in `/provision/roles/tools/tasks/main.yml` for the time being, since it keeps failing

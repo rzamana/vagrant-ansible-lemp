@@ -1,0 +1,19 @@
+---
+  - name: upgrade everything
+    apt:
+      upgrade: full
+
+  - name: create the 'studioboz' user
+    user: name=studioboz append=yes state=present createhome=yes shell=/bin/bash
+
+  - name: allow 'studioboz' to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      line: 'studioboz ALL=(ALL) NOPASSWD: ALL'
+      validate: 'visudo -cf %s'
+
+  - name: set up authorized keys for the studioboz user
+    authorized_key: user=studioboz key="{{item}}"
+    with_file:
+      - keys/rzamana.pub
+      - keys/rkb81.pub

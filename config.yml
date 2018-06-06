@@ -1,9 +1,9 @@
 ---
-ip_addr: '192.168.69.99'
-hostname: 'DevBox'
+ip_addr: '144.202.17.99'
+hostname: 'shoji.studioboz.com.br'
 domains:
   -
-    name: 'testsite.local'
-    db_name: 'testsite_dev'
-    docroot: '/sites/testsite'
+    name: 'homologa.p3k.com.br'
+    db_name: ''
+    docroot: '/var/www/p3k.com.br/current/web'
 

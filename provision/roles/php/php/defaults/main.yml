@@ -52,7 +52,7 @@ php_ini_template: php.ini.j2
 # Memory limit configuration. php_memory_limit applies to all SAPIs while php_memory_limit_cli can be used to override 
 # the memory limit for the CLI SAPI. The latter is undefined by default, meaning no override will be done.
 #
-php_memory_limit: 128M
+php_memory_limit: 256M
 #php_memory_limit_cli: 2G
 
 # Whether to display errors. Default to off to prevent from accidentally forgetting to disable in staging/production
@@ -62,11 +62,13 @@ php_display_errors: Off
 php_always_populate_raw_post_data: -1
 
 # make sure you use matching values for nginx too
-php_upload_max_filesize: 10M
-php_post_max_size: 10M
+php_upload_max_filesize: 64M
+php_post_max_size: 64M
 
-php_timezone: Europe/Helsinki
+php_timezone: America/Sao_Paulo
 
+php_max_execution_time: 600
+php_max_input_time: 600
 #
 #
 # Opcache settings. Defaults are 64 MB / 2000 files, we increase that because with Symfony/Magento etc. the limit is 
@@ -84,8 +86,12 @@ php_opcache_validate_timestamps: "1"
 # Allow file existence override (file_exists, etc.) performance feature. Enable in production only.
 #
 php_opcache_enable_file_override: "0"
+php_opcache_interned_strings_buffer: 8
+php_opcache_revalidate_freq: 2
+php_opcache_fast_shutdown: 1
+php_opcache_enable_cli: 1
 
-php_composer_config_path: /home/vagrant/.config/composer
+php_composer_config_path: /home/studioboz/.config/composer
 
 #
 # The template to use for Composer's auth.json

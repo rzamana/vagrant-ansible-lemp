@@ -1,6 +1,6 @@
 *.log
 *.retry
-/.vagrant/*
+/.studioboz/*
 /sites/*
 !/sites/testsite/*
 

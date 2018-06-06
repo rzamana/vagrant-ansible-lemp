@@ -5,13 +5,8 @@
   become_user: root
   become_method: sudo
   roles:
+    - studioboz
     - common/timezone
     - common/base-packages
-    - common/hostname
-    - php/xdebug
-    - php/php
-    - mariadb/server
-    - mariadb/client
     - nginx
-    - nodejs
     - tools
