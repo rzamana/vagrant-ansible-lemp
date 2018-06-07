@@ -1,5 +1,6 @@
 [p3k]
-pre ansible_host=104.236.59.106 ansible_user=root
+stage ansible_host=104.236.59.106 ansible_user=root
+db ansible_host=104.236.7.158 ansible_user=root
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3

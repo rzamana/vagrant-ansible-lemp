@@ -4,11 +4,12 @@ common_base_packages_packages:
   - screen
   - tmux
   - vim
-  - nano
-  - git-core
   - python-software-properties
-  - apt-transport-https
   - wget
   - ntp
   - unzip
   - python-pip
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common

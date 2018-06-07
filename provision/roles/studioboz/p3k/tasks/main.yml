@@ -1,0 +1,15 @@
+---
+  - name: Studioboz | ECR login
+    become: yes
+    become_user: studioboz
+    shell: "$(aws ecr get-login --no-include-email)"
+
+  - name: P3K | Pull image from ECR
+    become: yes
+    become_user: studioboz
+    shell: "docker pull 797775092634.dkr.ecr.us-east-1.amazonaws.com/coreline-p3k:latest"
+
+  - name: P3K | Assures dir exists
+    become: yes
+    become_user: studioboz
+    file: path="~/p3k/web/app/uploads" state=directory recurse=yes

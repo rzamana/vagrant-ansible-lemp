@@ -4,7 +4,13 @@
       upgrade: full
 
   - name: create the 'studioboz' user
-    user: name=studioboz append=yes state=present createhome=yes shell=/bin/bash
+    user: 
+      name: studioboz 
+      append: yes 
+      state: present 
+      createhome: yes 
+      shell: /bin/bash 
+      groups: docker
 
   - name: allow 'studioboz' to have passwordless sudo
     lineinfile:

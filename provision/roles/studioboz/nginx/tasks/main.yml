@@ -1,0 +1,20 @@
+---
+  - name: nGinx | Pull image from DockerHub
+    become: yes
+    become_user: studioboz
+    shell: "docker pull jrcs/letsencrypt-nginx-proxy-companion"
+
+  - name: nGinx | Pull image from DockerHub
+    become: yes
+    become_user: studioboz
+    shell: "docker pull jwilder/nginx-proxy"
+
+  - name: nGinx | Assures dir exists
+    become: yes
+    become_user: studioboz
+    file: path="~/nginx/vhosts.d" state=directory recurse=yes
+
+  - name: nGinx | Assures dir exists
+    become: yes
+    become_user: studioboz
+    file: path="~/nginx/certs" state=directory recurse=yes

@@ -1,0 +1,5 @@
+---
+  - name: AWS | install awscli
+    pip: 
+      name: awscli
+      executable: /usr/bin/pip

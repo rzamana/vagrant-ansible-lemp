@@ -5,5 +5,5 @@ domains:
   -
     name: 'homologa.p3k.com.br'
     db_name: ''
-    docroot: '/var/www/p3k.com.br/current/web'
+    docroot: ''
 

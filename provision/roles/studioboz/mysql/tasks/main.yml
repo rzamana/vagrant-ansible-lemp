@@ -1,0 +1,10 @@
+---
+  - name: MySQL | Pull image from DockerHub
+    become: yes
+    become_user: studioboz
+    shell: "docker pull mysql:5.7"
+
+  - name: phpMyAdmin | Pull image from DockerHub
+    become: yes
+    become_user: studioboz
+    shell: "docker pull phpmyadmin/phpmyadmin"

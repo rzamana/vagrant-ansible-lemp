@@ -5,8 +5,26 @@
   become_user: root
   become_method: sudo
   roles:
-    - studioboz
     - common/timezone
     - common/base-packages
-    - nginx
-    - tools
+    - common/aws
+    - common/docker
+    - studioboz/main
+
+- name: Configure P3K
+  hosts: stage
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - studioboz/aws
+    - studioboz/nginx
+    - studioboz/p3k
+
+- name: Configure DB
+  hosts: db
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - studioboz/mysql
